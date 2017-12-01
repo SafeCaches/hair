@@ -8,13 +8,13 @@ import { HttpErrorResponse } from '@angular/common/http';
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css'],
-  providers: [PostsService]
+   providers: [PostsService]
 })
 export class PostListComponent implements OnInit {
 
   posts: Post[];
 
-  constructor( private postsService: PostsService, private router: Router ) { }
+  constructor( private postsService: PostsService, private router: Router ) {}
 
   ngOnInit() {
 
@@ -23,9 +23,12 @@ export class PostListComponent implements OnInit {
       (err: HttpErrorResponse) => err.error instanceof Error ? console.log('An error occurred:', err.error.message) : console.log(`Backend returned code ${err.status}, body was: ${err.error}`));
 
   }
- 
-  selectPost(slug) {
+  
+    selectPost(slug) {
   	this.router.navigate([slug]);
   }
 
-}
+  }
+  
+  
+ 

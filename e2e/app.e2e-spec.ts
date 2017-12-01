@@ -1,6 +1,6 @@
 import { Wpng2Page } from './app.po';
 
-describe('wpng2 App', function() {
+describe('hair App', function() {
   let page: Wpng2Page;
 
   beforeEach(() => {

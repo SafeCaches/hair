@@ -1,0 +1,11 @@
+export class ArticlesService {
+
+	private _wpBase = 'http://localhost:8888/hair/wp-json/wp/v2/';
+
+	...
+
+	getArticle(slug) {
+		return this.http.get(this._wpBase + 'posts?filter[name]=' + slug + '&_embed');
+	}
+
+}

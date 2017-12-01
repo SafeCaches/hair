@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from '../posts.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
 import { Post } from '../post';
-import 'rxjs/add/operator/switchMap';
+import { PostsService } from '../posts.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-post-single',
   templateUrl: './post-single.component.html',
-  styleUrls: ['./post-single.component.css'],
+  styleUrls: ['./post-single.component.scss'],
   providers: [PostsService]
+
 })
 export class PostSingleComponent implements OnInit {
 
@@ -17,15 +16,20 @@ export class PostSingleComponent implements OnInit {
 
   constructor( private postsService: PostsService, private route: ActivatedRoute ) { }
 
+  getPost(slug){
+    this.postsService
+      .getPost(slug)
+      .subscribe(res => {
+        this.post = res[0];
+      });
+  }
+
   ngOnInit() {
 
-    this.route.paramMap
-    .switchMap((params: ParamMap) =>
-      this.postsService.getPost(params.get('slug')))
-    .subscribe(
-      (post: Post[]) => this.post = post[0],
-      (err: HttpErrorResponse) => err.error instanceof Error ? console.log('An error occurred:', err.error.message) : console.log(`Backend returned code ${err.status}, body was: ${err.error}`)
-    );
+    this.route.params.forEach((params: Params) => {
+       let slug = params['slug'];
+       this.getPost(slug)
+    });
 
   }
 

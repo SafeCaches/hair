@@ -1,0 +1,134 @@
+/* line 5, ../sass/app.component.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, .fusion-modal h1, .fusion-page-title-bar h1, .fusion-widget-area h1, .post-content h1, .fusion-main-menu > ul > li > a, .side-nav li a {
+/*  font-family: 'Montserrat';*/
+}
+
+/* line 9, ../sass/app.component.scss */
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 2000px;
+  float: right;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 1rem 0 5rem;
+  letter-spacing: -0.025rem;
+  width: 65%;
+}
+/* line 20, ../sass/app.component.scss */
+.navbar ul {
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  margin: 0 auto;
+}
+
+/* line 48, ../sass/app.component.scss */
+.nav-link {
+  font-size: 1em;
+  width: 100px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 64, ../sass/app.component.scss */
+.nav :hover {
+  background: transparent;
+  text-decoration: underline;
+}
+
+/* line 70, ../sass/app.component.scss */
+.about_me img {
+  width: 600px;
+  float: right;
+}
+
+/* line 75, ../sass/app.component.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/* line 82, ../sass/app.component.scss */
+.container > .about_me {
+  width: 85%;
+  margin: 5rem auto 0 auto;
+}
+/* line 86, ../sass/app.component.scss */
+.container > .about_me h2 {
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  padding: 7% 0 7% 0;
+  text-align: center;
+}
+
+/* line 94, ../sass/app.component.scss */
+footer {
+  width: 85%;
+  margin: 5em auto 0 auto;
+  padding: 40px 0px 20px;
+}
+
+/* line 99, ../sass/app.component.scss */
+.footer_contact {
+  padding: 15% 0 0 22%;
+}
+
+/* line 102, ../sass/app.component.scss */
+.jumbotron {
+  background-color: #CEB0B2;
+  margin: -1% -2% -5% -4%;
+}
+/* line 106, ../sass/app.component.scss */
+.jumbotron img {
+  margin-left: 25%;
+  margin-top: 4%;
+  margin-bottom: -3.5%;
+  width: 600px;
+}
+@media screen and (max-width: 320px) {
+  /* line 106, ../sass/app.component.scss */
+  .jumbotron img {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+
+/* line 118, ../sass/app.component.scss */
+.social-links li {
+  display: inline-block;
+}
+/* line 121, ../sass/app.component.scss */
+.social-links img {
+  width: 2em;
+}
+
+/* line 126, ../sass/app.component.scss */
+ul li {
+  list-style: none;
+}

@@ -1,0 +1,11 @@
+@Component({
+	selector: 'router-outlet',
+	template: `
+		<div *ngIf="article">
+			<h1>{{ article.title.rendered }}</h1>
+			<img src="{{article._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}}" />
+			<div [innerHTML]="article.content.rendered"> </div>
+		</div>
+	`,
+	providers: [ArticlesService]
+})

@@ -6,3 +6,4 @@ export class Post {
         rendered: string;
     }
 }
+

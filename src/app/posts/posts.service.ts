@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Post } from './post';
 import { environment } from '../../environments/environment';
 
+
 @Injectable()
 export class PostsService {
 
@@ -22,5 +23,5 @@ export class PostsService {
       return this.http.get<Post[]>(this._wpBase + `posts?slug=${slug}`);
 
   }
-
+   
 }
